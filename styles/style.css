@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: poppins-bold;
+    src: url(../assets/tipografias/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: poppins-medium;
+    src: url(../assets/tipografias/Poppins-Medium.ttf);
+}
+header {
+    background-color: #01963A;
+    display: flex;
+    align-items: center;
+}
+.imagen-inicio {
+    margin-right: 20px; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    margin-left: 20px; 
+    font-family: poppins-bold;
+}
+h2{
+    text-align: center;
+    font-family: poppins-bold;
+}
+main{
+    font-family: poppins-medium;
+}
+.primera-section {
+    display: flex;
+    flex-direction: row; 
+    background-image: url("https://i.ibb.co/rQQ0gXz/fondo-desktop.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px; 
+}
+p{
+    color: #FFFFFF;
+    margin-left: 1.25rem;
+}
+.servicios{
+    text-align: center;
+}
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+.grid-servicios img {
+    max-width: 100%;
+    height: auto;
+}
+.grid-servicios div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px; /* Espacio entre las imágenes */
+}
+footer{
+    background-color: #01963a;
+    font-family: poppins-medium;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .imagen-inicio {
+        margin-right: 10px; 
+    }
+    .primera-section {
+        background-image: url("https://i.ibb.co/w6gW8yB/fondo-mobile.png"); /* Cambia la imagen de fondo en pantallas pequeñas */
+        background-size: cover;
+        background-position: center;
+        flex-direction: column; /* Alinea la imagen arriba y el texto abajo en pantallas pequeñas */
+        align-items: center; /* Centra el contenido en pantallas pequeñas */
+    }
+    p {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        margin-top: 20px; /* Espacio entre la imagen y el texto en pantallas pequeñas */
+    }
+    .grid-servicios {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 769px) {
+    .grid-servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .redes {
+        justify-content: flex-start;
+    }
+}
